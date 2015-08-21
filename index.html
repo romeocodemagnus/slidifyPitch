@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pitch for Shiny Dashboard</title>
+  <meta name="description" content="">
+  <meta name="author" content="rflauta@codemagnus.com">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h2>Shiny Management Dashboard</h2>
+  <p>The cloud has enabled disparate apps and websites to gather big data into central databases. However, such data would be useless if these are not processed into meaningful information. </p>
+
+<p>Current market practices make use of Python, Javascript (especially Angularjs), and a host of walled solutions like Tableau, to create management dashboards. However, R, of which Shiny is based on, is the preferred environment for data scientists who have strong background in Statistics. This is a very important distinction because it is dangerous to pass on data interpretation to pure coders who can create graphs from the data without the necessary background in Statistics. Moreover, R can process big data in advanced ways.</p>
+
+</section>
+<section class='class' data-state='' id='plots'>
+  <h2>Plots with ggplot2</h2>
+  <p>The output can render plots, for example, using ggplot2: </p>
+
+<pre><code class="r">dataCars$am &lt;- factor(mtcars$am,levels=c(0,1), labels=c(&quot;Automatic&quot;,&quot;Manual&quot;)) 
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Responsive in smaller devices</h2>
+  <div style='text-align: center;'>
+    <img height="600" src="responsive.png" />
+</div>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Interactive</h2>
+  <div style='text-align: center;'>
+    <img height="600" src="predict.png" />
+</div>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Conclusion</h2>
+  <p>As a mobile apps developer and manager of cloud projects, I am very much aware of the need for powerful management dashboards. R and Shiny seem to hold the solution for the need to create a unique dashboard that is free, open source, easy to learn, attractive to look at, interactive, can communicate with remote data, and very powerful for analyzing big data.</p>
+
+<p>This project is a version 0.1 development of a management dashboard. It does not attempt to pull data from a remote data source as the initial objective is only to create an attractive and interactive dashboard that can collect user input, submit to a server code, process the input in the server code, and then display the result in the client dashboard. </p>
+
+<p>I hope I have convinced you to use shiny management dashboard.</p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
